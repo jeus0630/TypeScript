@@ -1,7 +1,5 @@
-const links = document.querySelectorAll('a');
+const arrayGeneric = <T>(arr: T[]): T =>{
+    return arr[0];
+}
 
-links.forEach(link => {
-    if(link instanceof HTMLAnchorElement){
-        link.href= 'kakao';
-    }
-})
+arrayGeneric<number>([1,2,3]);
