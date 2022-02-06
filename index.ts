@@ -1,5 +1,11 @@
-const arrayGeneric = <T>(arr: T[]): T =>{
-    return arr[0];
+type Car = {
+    color: boolean,
+    model: boolean,
+    price: boolean | number
 }
 
-arrayGeneric<number>([1,2,3]);
+type TypeChanger<T,S> = {
+    [key in keyof T] : S
+}
+
+type NewType = TypeChanger<Car, number>;
